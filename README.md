@@ -2,6 +2,12 @@ PHP na Prática
 
 Videos Aulas: https://www.youtube.com/playlist?list=PLHz_AreHm4dm4beCCCmW4xwpmLf6EHY9k
 
+***********************************************************************
+Fonte Original do arquivo animate.css:                                *
+                                                                      *
+https://daneden.github.io/animate.css/                                *
+***********************************************************************
+
 Software necessário: Wampserver
 
 Editor de Texto: Atom
