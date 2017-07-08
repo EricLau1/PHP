@@ -31,3 +31,5 @@ a2 - echo "Variáveis";  ~> http://localhost/Projects/_php/a2/index.php
 a3 - echo "Operadores Aritméticos"; ~> http://localhost/Projects/_php/a3/index.php?n1=10&n2=20
 
 a3 - echo "Funções Aritméticas";    ~> http://localhost/Projects/_php/a3/funcoes.php?n1=5&n2=-10
+
+a4 - echo "Operadores de Atribuição"; ~> http://localhost/Projects/_php/a4/index.php?p=100
