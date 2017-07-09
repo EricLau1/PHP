@@ -39,3 +39,11 @@ a5 - echo "Operadores Relacionais"; ~> http://localhost/Projects/_php/a5/index.p
 a6 - echo "PHP & HTML5"; ~> http://localhost/Projects/_php/a6/form.html
 
 a7 - echo "PHP & CSS"; ~> http://localhost/Projects/_php/a7/form.html
+
+a8 - echo "Estruturas Condicionais"; ~> http://localhost/Projects/_php/a8/form.html
+
+a8 - echo "Desafio: Vericando a Média"; ~> http://localhost/Projects/_php/desafios/a8/form.html
+
+PHP - Bibliotecas:
+
+Date - echo "Datas"; ~> http://localhost/Projects/_php/ref/date/index.php
