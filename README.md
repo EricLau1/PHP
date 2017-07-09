@@ -44,6 +44,22 @@ a8 - echo "Estruturas Condicionais"; ~> http://localhost/Projects/_php/a8/form.h
 
 a8 - echo "Desafio: Vericando a Média"; ~> http://localhost/Projects/_php/desafios/a8/form.html
 
+a9 - echo "Switch"; ~> http://localhost/Projects/_php/a9/form.html
+
+a9 - echo "Desafio:  Regiões do Brasil"; ~> http://localhost/Projects/_php/desafios/a9/form.html
+
+a10 - echo "While"; ~> http://localhost/Projects/_php/a10/form.php
+
+a10 - echo "Desafio: While"; ~> http://localhost/Projects/_php/desafios/a10/form.html
+
+a11 - echo "Do While"; ~> http://localhost/Projects/_php/a11/form.html
+
+a11 - echo "Desafio: Tabuada"; ~> http://localhost/Projects/_php/desafios/a11/form.php
+
+a12 - echo "for"; ~> http://localhost/Projects/_php/a12/form.php
+
+a12 - echo "Desafio: Numeros Primos"; ~> http://localhost/Projects/_php/desafios/a12/form.html
+
 PHP - Bibliotecas:
 
 Date - echo "Datas"; ~> http://localhost/Projects/_php/ref/date/index.php

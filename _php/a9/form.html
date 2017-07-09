@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="pt-br">
+<head>
+   <meta charset="utf-8"/>
+   <title>Formulario</title>
+   <link rel="stylesheet" type="text/css" href="_css/form.css"/>
+   <link href="https://fonts.googleapis.com/css?family=Titillium+Web" rel="stylesheet">
+   <style>
+       label{
+         cursor: pointer;
+       }
+
+       .botao {
+         padding: 10px;
+         background: #4d88ff;
+         transition: .6s;
+         color: #fff;
+         border-radius: 5px;
+       }
+
+       .botao:hover{
+         border: 2px solid #4d88ff;
+         background: #fff;
+         color: #004de6;
+         box-shadow:  0 0 0 6px rgba(0,0,0,.2);
+       }
+   </style>
+</head>
+<body>
+  <h1>Programando em PHP - Formulário</h1>
+   <div class="form animated rubberBand">
+    <form method="get" action="index.php">
+      Numero: <input type="number" name="num" required="true"> <br/>
+
+      <fieldset><legend>Operação</legend>
+         <input type="radio" name="oper" id="dobro" value="1" checked>
+         <label for="dobro">Dobro</label> <br/>
+
+         <input type="radio" name="oper" id="cubo" value="2">
+         <label for="cubo">Cubo</label> <br/>
+
+         <input type="radio" name="oper" id="raiz" value="3">
+         <label for="raiz">Raiz</label> <br/>
+      </fieldset><br/>
+
+      <br/>
+       Dia da Semana: <input type="number" name="ds" max="7" min="1" value="1"> <br/>
+
+      <br/>
+      <input type="submit" value="Calcular" class="botao">
+    </form>
+   </div>
+
+</body>
+</html>
