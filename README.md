@@ -33,3 +33,9 @@ a3 - echo "Operadores Aritméticos"; ~> http://localhost/Projects/_php/a3/index.
 a3 - echo "Funções Aritméticas";    ~> http://localhost/Projects/_php/a3/funcoes.php?n1=5&n2=-10
 
 a4 - echo "Operadores de Atribuição"; ~> http://localhost/Projects/_php/a4/index.php?p=100
+
+a5 - echo "Operadores Relacionais"; ~> http://localhost/Projects/_php/a5/index.php?a=5&b=23&op=s
+
+a6 - echo "PHP & HTML5"; ~> http://localhost/Projects/_php/a6/form.html
+
+a7 - echo "PHP & CSS"; ~> http://localhost/Projects/_php/a7/form.html

@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="pt-br">
+<head>
+   <meta charset="utf-8"/>
+   <title>Formulario - Cores e CSS</title>
+   <link rel="stylesheet" type="text/css" href="_css/form.css"/>
+   <link href="https://fonts.googleapis.com/css?family=Titillium+Web" rel="stylesheet">
+</head>
+<body>
+  <h1>Programando em PHP - Cores e CSS</h1>
+   <div class="form animated rubberBand">
+    <form method="GET" action="index.php">
+
+      <label for="itxt"> Texto: </label>
+      <input type="text" name="txt" id="itxt" /> <br/>
+
+      <label for="itam">Tamanho: </label>
+      <select name="tam" id="itam">
+          <option value="8pt">8</option>
+          <option value="14pt">14</option>
+          <option value="20pt">20</option>
+          <option value="40pt">40</option>
+      </select> <br/>
+
+      <label for="icor">Cor: </label>
+      <input type="color" name="cor" id="icor" /> <br/><br/>
+
+      <input type="submit" value="Gerar">
+
+    </form>
+   </div>
+
+</body>
+</html>

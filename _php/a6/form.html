@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="pt-br">
+<head>
+   <meta charset="utf-8"/>
+   <title>Formulario</title>
+   <link rel="stylesheet" type="text/css" href="_css/form.css"/>
+   <link href="https://fonts.googleapis.com/css?family=Titillium+Web" rel="stylesheet">
+</head>
+<body>
+  <h1>Programando em PHP - Formulário</h1>
+   <div class="form animated rubberBand">
+    <form method="get" action="index.php">
+      Calcular a Raiz quadrada de um número: <br>
+      Valor: <input type="number" name="valor" required="true" value="1"> <br/> <br/>
+
+      Enviando dados pessoais: <br>
+      Nome: <input type="text" name="nome" required="true"> <br/>
+      Ano de Nascimento: <input type="number" name="ano" required="true" value="2017"> <br/>
+      <fieldset><legend>Sexo</legend>
+         <input type="radio" name="sexo" id="masc" checked="true" value="masculino">
+         <label for="masc">Masculino</label></br>
+
+         <input type="radio" name="sexo" id="fem" value="feminino">
+         <label for="fem">Feminino</label> </br>
+      </fieldset><br/>
+
+      <input type="submit" value="Enviar">
+    </form>
+   </div>
+
+</body>
+</html>
