@@ -60,6 +60,12 @@ a12 - echo "for"; ~> http://localhost/Projects/_php/a12/form.php
 
 a12 - echo "Desafio: Numeros Primos"; ~> http://localhost/Projects/_php/desafios/a12/form.html
 
+a13 - echo "Funções Parte 1"; ~> http://localhost/Projects/_php/a13/index.php
+
+a14 - echo "Funções Parte 2 - Arquivos Externos"; ~> http://localhost/Projects/_php/a14/index.php
+
+a15 - echo "Funções de Strings Parte 1"; ~> http://localhost/Projects/_php/a15/index.php
+
 PHP - Bibliotecas:
 
 Date - echo "Datas"; ~> http://localhost/Projects/_php/ref/date/index.php
