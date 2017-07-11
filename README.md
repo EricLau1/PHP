@@ -66,6 +66,8 @@ a14 - echo "Funções Parte 2 - Arquivos Externos"; ~> http://localhost/Projects
 
 a15 - echo "Funções de Strings Parte 1"; ~> http://localhost/Projects/_php/a15/index.php
 
+a16 - echo "Funções de Strings Parte 2"; ~> http://localhost/Projects/_php/a16/index.php
+
 PHP - Bibliotecas:
 
 Date - echo "Datas"; ~> http://localhost/Projects/_php/ref/date/index.php
