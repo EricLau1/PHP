@@ -68,6 +68,12 @@ a15 - echo "Funções de Strings Parte 1"; ~> http://localhost/Projects/_php/a15
 
 a16 - echo "Funções de Strings Parte 2"; ~> http://localhost/Projects/_php/a16/index.php
 
+a17 - echo "Vetores"; ~> http://localhost/Projects/_php/a17/index.php
+
+a18 - echo "Matrizes"; ~> http://localhost/Projects/_php/a18/index.php
+
+a19 - echo "Vetores, Matrizes e Funções"; ~> http://localhost/Projects/_php/a19/index.php
+
 PHP - Bibliotecas:
 
 Date - echo "Datas"; ~> http://localhost/Projects/_php/ref/date/index.php
