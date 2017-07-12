@@ -77,3 +77,11 @@ a19 - echo "Vetores, Matrizes e Funções"; ~> http://localhost/Projects/_php/a1
 PHP - Bibliotecas:
 
 Date - echo "Datas"; ~> http://localhost/Projects/_php/ref/date/index.php
+
+Atualização para PHP 7:
+
+Só clicar no icone verde do wampserver que aparece quando o servidor é ligado
+
+Clique em PHP -> Version -> 7.0.10
+
+Algumas funcionalidades novas do PHP 7 ~> http://localhost/Projects/_php/php7/index.php
