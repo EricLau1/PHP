@@ -23,3 +23,7 @@ a1 - echo "Classes e Objetos"; ~> http://localhost/Projects/_phpoo/a1/index.php
 a2 - echo "Visibilidade de Atributos"; ~> http://localhost/Projects/_phpoo/a2/index.php
 
 a3 - echo "Getters, Setters e o Construtor"; ~> http://localhost/Projects/_phpoo/a3/index.php
+
+a4 - echo "Exemplo Prático: Conta de Banco"; ~> http://localhost/Projects/_phpoo/a4/index.php
+
+a5 - echo "Encapsulamento, implementando Interface"; ~> http://localhost/Projects/_phpoo/a5/index.php
