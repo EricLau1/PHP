@@ -27,3 +27,9 @@ a3 - echo "Getters, Setters e o Construtor"; ~> http://localhost/Projects/_phpoo
 a4 - echo "Exemplo Prático: Conta de Banco"; ~> http://localhost/Projects/_phpoo/a4/index.php
 
 a5 - echo "Encapsulamento, implementando Interface"; ~> http://localhost/Projects/_phpoo/a5/index.php
+
+a6 - echo "Objetos Compostos: Classe Lutador"; ~> http://localhost/Projects/_phpoo/a6/index.php
+
+a7 - echo "Agregação entre Objetos: Classe Luta"; ~> http://localhost/Projects/_phpoo/a7/index.php
+
+a8 - echo "Exemplo Prático: Classe Livro"; ~> http://localhost/Projects/_phpoo/a8/index.php
