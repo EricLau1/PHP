@@ -33,3 +33,17 @@ a6 - echo "Objetos Compostos: Classe Lutador"; ~> http://localhost/Projects/_php
 a7 - echo "Agregação entre Objetos: Classe Luta"; ~> http://localhost/Projects/_phpoo/a7/index.php
 
 a8 - echo "Exemplo Prático: Classe Livro"; ~> http://localhost/Projects/_phpoo/a8/index.php
+
+a9 - echo "Herança Parte 1"; ~> http://localhost/Projects/_phpoo/a9/index.php
+
+a10 - echo "Herança Parte 2"; ~> http://localhost/Projects/_phpoo/a10/index.php
+
+a11 - echo "Polimorfismo: Sobreposição"; ~> http://localhost/Projects/_phpoo/a11/index.php
+
+a12 - echo "Polimorfismo: !Sobrecarga"; ~> http://localhost/Projects/_phpoo/a12/index.php
+
+*php não suporta Sobrecarga*
+
+a13 - echo "Projeto Final - Parte 1"; ~> http://localhost/Projects/_phpoo/a13/index.php
+
+a14 - echo "Projeto Final - Parte 2"; ~> http://localhost/Projects/_phpoo/a14/index.php
