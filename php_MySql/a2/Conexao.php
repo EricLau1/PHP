@@ -1,8 +1,3 @@
-<style>
-    th,td {
-      padding: 10px;
-      border: 1px solid silver;
-    }
 </style>
 
 <?php
