@@ -1,0 +1,32 @@
+<!--http://localhost/Projects/php_MySql/Templates/Cadastro/index.html-->
+<!doctype html>
+<html lang="pt-br">
+<head>
+  <meta charset="utf-8"/>
+  <title>PHP & MySQL - Cadastro</title>
+</head>
+<body>
+  <h1>Cadastro de Usuários</h1>
+  <form method="post" action="cadastro.php">
+    <label for="idNome">Nome completo</label>
+    <input type="text" maxlength="35" name="nome" id="idNome" required>  </br></br>
+
+    <label>Data de nascimento </label>
+    <input type="date" name="nascimento"  required>  </br></br>
+
+    <fieldset><legend>Sexo</legend>
+      <input type="radio" name="sexo" id="idMasc" value="M" checked> <label for="idMasc">Masculino</label>  </br>
+
+      <input type="radio" name="sexo" id="idFem" value="F">  <label for="idFem">Feminino</label>
+   </fieldset> <br/>
+
+   <label for="idEmail">Email</label>
+   <input type="text" maxlength="50" name="email" id="idEmail" required>  </br></br>
+
+   <label for="idSenha">Senha</label>
+   <input type="password" maxlength="20" name="senha" id="idSenha" required>  </br></br>
+
+   <input type="submit" value="Cadastrar">
+  </form>
+</body>
+</html>
