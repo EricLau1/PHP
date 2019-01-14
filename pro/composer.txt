@@ -1,0 +1,41 @@
+PHP + Composer
+
+Comandos essenciais
+
+\> php -S localhost:8888 -t public
+
+	este comando inicia o servidor embutido do php em qualquer direitorio do sistema.
+	os parametros "-t public" significa que o servidor vai procurar o arquivo index,
+	dentro da pasta "public", porém estes parametros não são obrigatórios.
+
+
+\> composer init 
+
+	este comando inicia um projeto com composer.
+
+
+Como configurar caminhos de arquivos dentro do composer para nao precisar usar "require/include".
+
+{
+  "autoload": {
+
+	"files" : [
+
+		"app/class/User.php",
+		"app/db/Database.php"
+	]
+  }
+}
+
+Comando necessário para que as alterações no arquivo composer.json funcionem:
+
+\> composer dump-autoload -o
+
+Também é preciso importar o arquivo dentro do index:
+
+<?php require 'vendor/autoload.php' ?>
+
+
+Pronto agora esta tudo pronto para programar!
+
+

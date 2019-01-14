@@ -1,0 +1,115 @@
+PHP AVANÇADO
+
+Estrutura de diretorios e arquivos inicias:
+
+	php-workspace
+		    |
+		     app
+		     |  |
+		     |  functions
+		     |           |
+		     |           database.php
+		     |           flash.php
+		     |           custom.php
+		     |           validate.php
+		     |           pages.php
+		     |           email.php 
+		     public
+		     | 	  |
+		     |     assets
+		     |	   |	|
+		     |	   |	 css
+		     |	   |	 js
+		     |	   |	 images
+		     |	   |
+		     |	   pages
+		     |     |    |
+		     |     |     forms
+		     |     |         |
+		     |     |          contato.php
+		     |     |     home.php
+		     |     |     contato.php
+		     |	   index.php
+		     |
+	             bootstrap.php
+		     composer.json
+
+
+
+Descrição dos arquivos e pastas:
+
+	[php-workspace] - diretório raiz.
+
+	[app] - diretorio da aplicação.
+	
+	[functions] - diretórios de funções.
+
+	[public] - diretorio de páginas publicas.
+
+	[assets] - diretorio de recursos.
+
+	[pages] - diretório de páginas
+	
+	[forms] - diretório de validação de formulários.
+
+	'index.php' - arquivo principal chamado pelo servidor.
+
+	'bootstrap.php' - mantém uma sessão aberta para o autoload dos arquivos do composer.
+
+	'composer.json' - arquivo de configuração do composer, autoload de arquivos.
+	
+	'validate.php' - trata os dados enviados do formulário.
+
+	'custom.php' - funções gerais do aplicativo.
+
+	'pages.php' - funçoes que organizam as chamadas de páginas pela URL.
+
+	'flash.php' - funções para enviar mensagens de erros através de sessões.
+	
+	'email.php' - função para enviar email com PHPMailer.
+
+	'database.php' - arquivo de conexão com o banco de dados.
+
+Iniciando o servidor do php dentro da pasta public:
+
+	\> php -S localhost:8888 -t public
+
+	* considera-se que o path do terminal ja esteja dentro do direitorio raiz. *
+
+
+Comando para instalar as configurações do composer no aplicativo:
+
+	\> composer install
+
+Comando para recompilar o composer.json:
+
+	\> composer dump-autoload -o
+
+
+Comando para baixar o pacote do PhpMailer:
+
+	\> composer require
+
+	Digite o nome do pacote que deseja procurar => phpmailer, escolha a opção que irá usar.
+
+Site para testar envio de emails: 
+	
+	https://mailtrap.io/
+
+
+	Banco de dados MySQL:
+
+create database blog
+default character set utf8 
+default collate utf8_general_ci;
+
+create table if not exists usuarios(
+id int auto_increment,
+nome varchar(50) not null,
+sobrenome varchar(50),
+email varchar(50) not null unique,
+senha varchar(60),
+constraint usuarios_id_pk primary key(id)
+)
+engine = InnoDB
+default charset = utf8;

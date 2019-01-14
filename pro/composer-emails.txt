@@ -1,0 +1,340 @@
+	
+	Composer.
+
+	Download para windows: https://getcomposer.org/doc/00-intro.md#installation-windows
+
+	Site de dependencias: https://packagist.org/
+
+	Comando para visualizar se os comandos do composer:
+
+	\> composer
+
+	É necessário criar um arquivo chamado "composer.json" dentro do diretorio raiz onde ele será usado.
+
+	Abra e feche chaves {} dentro do arquivo composer.json.
+
+	Comando para instalar o phpmailer:
+
+	\> composer require phpmailer/phpmailer
+
+	Agora é possível visualizar o a dependencia da biblioteca phpmailer dentro do arquivo composer.json.
+
+	Estrutura de arquivos e diretorios:
+
+	vendor
+		composer
+
+		phpmailer
+
+	composer.json
+	composer.lock
+
+	Crie um diretorio chamado "app" e dentro dele crie outro chamado "classes".
+
+	Dentro do diretorio classe crie o arquivo Email.php.
+
+	Conteudo do Email.php:
+
+<?php
+
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\Exception;
+
+class Email extends PHPMailer {
+
+
+    public function send() {
+
+        return "Enviar email";
+
+    }
+
+}
+
+	Para que uma classe seja carregada sem precisar de requires e necessário que haja o arquivo
+
+	que irá carregar arquivo "autoload.php" que geralmente fica no arquivo raiz "index.php".
+
+	Conteudo do index.php:
+
+
+<?php
+
+
+require 'vendor/autoload.php';
+
+require 'app/classes/Email.php';
+
+$email = new Email;
+
+echo $email->send();
+
+
+	Iniciando um projeto a partir do composer.
+
+	Comando para iniciar um projeto:
+
+	\> composer init
+
+	Pode pular todas as perguntas dando [enter].
+
+	Na pergunta "Search for a package: ", informe o pacote que deseja iniciar o projeto, por exemplo o "phpmailer".
+
+	Aparece varias opções, a usada neste projeto foi a opção [1] phpmailer/phpmailer.
+
+	Pode pressionar [enter] nas proxima perguntas e ele mostrar como o arquivo "composer.json" irá ficar.
+
+	Caso as informações estejam corretas, digite yes para confirmar.
+
+	Digite o proximo comando para instalar as dependencias listadas no arquivo "composer.json":
+
+	\> composer install
+
+	Adicione um novo pacote no "composer.json":
+
+{
+    "name": "eric/composer",
+    "require": {
+        "phpmailer/phpmailer": "^6.0",
+        "symfony/var-dumper": "4.1.1"
+    },
+    "authors": [
+        {
+            "name": "neoncat",
+            "email": "loua.oreeic@gmail.com"
+        }
+    ]
+}
+
+
+	Comando para atualizar o projeto e baixar os novos pacotes ou remover pacotes que foram tirados do require:
+
+	\> composer update
+
+	Adicione um novo parametro ao composer.json para baixar versões estáveis:
+
+{
+    "name": "eric/composer",
+    "minimum-stability": "stable",
+    "require": {
+        "phpmailer/phpmailer": "^6.0",
+        "symfony/var-dumper": "4.1.1",
+        "php-activerecord/php-activerecord": "^1.2"
+    },
+    "authors": [
+        {
+            "name": "neoncat",
+            "email": "loua.oreeic@gmail.com"
+        }
+    ]
+}
+
+
+	Comando para adicionar um novo pacote:
+
+	\> composer require
+
+	O require significa que será adicionado ao "require" do arquivo composer.json e este pacote será baixado
+
+	no projeto.
+
+	O composer irá perguntar o nome do pacote que sera adicionado e irá mostrar uma lista de 
+
+	pacotes para ser escolhido de acordo com o pacote buscado.
+
+ 	O arquivo composer.lock guarda todas as informações relacionadas aos pacotes do projeto.
+
+	Crie uma pasta chamada "app" e dentro ela outra pasta chamada "classes".
+
+	Dentro da pasta classe crie um arquivo chamdo "Produto.php":
+
+<?php
+
+
+namespace app\classes;
+
+class Produto {
+
+    public function create() {
+
+        return 'create <br>';
+
+    }
+
+}
+
+
+	Na pasta raiz crie outra pasta chamada "services" e dentro dela crie um arquivo chamdo "Search.php":
+
+<?php
+
+namespace asw\services;
+
+class Search {
+
+    public function search() {
+        
+        return 'search <br>';
+
+    }
+
+}
+
+	Crie o arquivo "index.php" no diretorio raiz, instancie as duas classes e chame suas funções:
+
+<?php
+
+
+require 'vendor/autoload.php';
+
+
+$produto = new app\classes\Produto;
+
+echo $produto->create();
+
+$servico = new asw\services\Search;
+
+echo $servico->search();
+
+	Para que não seja necessário informar o caminho do namespace de cada classe na hora da declaração
+
+	é necessário adicionar os caminhos dentro do composer.json, com o novo parametro "autoload":
+
+
+{
+    "name": "eric/composer",
+    "minimum-stability": "stable",
+    "require": {
+        "symfony/var-dumper": "4.1.1",
+        "php-activerecord/php-activerecord": "^1.2",
+        "cboden/ratchet": "^0.4.1"
+    },
+    "autoload": {
+        "psr-4": {
+            "app\\":"app",
+            "asw\\":"services"
+        }
+    },
+    "authors": [
+        {
+            "name": "neoncat",
+            "email": "loua.oreeic@gmail.com"
+        }
+    ]
+}
+
+
+	Após adicionar o prefixo e o caminho das pastas onde estão localizados os arquivos digite o comando
+
+	\> composer dump-autoload -o
+
+	Agora vamos trabalhar com varios diretorios com o mesmo prefixo.
+
+	Crie uma nova pasta no diretorio raiz chamada "connect" e crie o arquivo "Conexao.php":
+
+<?php
+
+namespace db\connect;
+
+class Conexao {
+
+    public function getConnection() {
+        
+        return 'conexao';
+    
+    }
+
+}
+
+	Crie outra pasta no diretorio raiz chamada "dao" e crie o arquivo "ProdutoDao.php":
+
+<?php
+
+namespace db\dao;
+
+
+class ProdutoDao {
+
+    public function insert() {
+
+        return 'insert';
+
+    }
+}
+
+	Agora adicione os prefixos e os caminhos ao arquivo composer.json dentro do parametre "autoload":
+
+{
+    "name": "eric/composer",
+    "minimum-stability": "stable",
+    "require": {
+        "symfony/var-dumper": "4.1.1",
+        "php-activerecord/php-activerecord": "^1.2",
+        "cboden/ratchet": "^0.4.1"
+    },
+    "autoload": {
+        "psr-4": {
+            "app\\":"app",
+            "asw\\":"services",
+            "db\\":["connect", "dao"]
+        }
+    },
+    "authors": [
+        {
+            "name": "neoncat",
+            "email": "loua.oreeic@gmail.com"
+        }
+    ]
+}
+
+	Quando os prefixos de dois pacotes são iguais e possível adicionar seus caminhos num vetor.
+	Para funcionar e necessário repetir o comando:
+
+	\> composer dump-autoload -o
+
+	Chamando funçoes sem precisar de requires.
+
+	Crie dentro da pasta app uma pasta chamada "functions" e dentro dela crie o arquivo "helpers.php":
+
+<?php
+
+
+function hello() {
+
+    return 'Hello!';
+
+}
+
+
+	Agora adicione mais um parametro dentro do "autoload" no arquivo composer.json:
+
+
+{
+    "name": "eric/composer",
+    "minimum-stability": "stable",
+    "require": {
+        "symfony/var-dumper": "4.1.1",
+        "php-activerecord/php-activerecord": "^1.2",
+        "cboden/ratchet": "^0.4.1"
+    },
+    "autoload": {
+        "psr-4": {
+            "app\\":"app",
+            "asw\\":"services",
+            "db\\":["connect", "dao"]
+        },
+        "files": [
+            "app/functions/helpers.php"
+        ]
+    },
+    "authors": [
+        {
+            "name": "neoncat",
+            "email": "loua.oreeic@gmail.com"
+        }
+    ]
+}
+
+	Após isso execute novamente o comando "composer dump-autoload -o" para atualizar o autoload.
+
+	Agora as funcoes podem ser acessadas de qualquer pasta ou arquivo sem necessidade de include ou require.
